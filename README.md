@@ -1,4 +1,4 @@
-# Here is a collection of image gallery I am developping for different projects using HTML, CSS and JavaScript.
+## Here is a collection of **image galleries** I am developping for different projects using HTML, CSS and JavaScript.
 
 ## Image Gallery 1:
 Animated slideshow for mobile / landscape mode.

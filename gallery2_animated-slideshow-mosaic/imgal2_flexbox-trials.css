@@ -1,0 +1,116 @@
+html{
+    background-color:rgb(228, 247, 248);
+    color:#333;
+    font-family: Arial,  Helvetica, sans-serif;
+    font-size:10px;
+}
+body{
+    margin:0;
+}
+.description{
+    width: 65%;
+    margin: 0 auto;
+    height: 35vh;
+    text-align:center;
+}
+.description h2{
+    margin:0;
+    padding-top: 50px;
+    text-align:center;
+    font-size: 2.5rem;
+}
+.description p{
+    margin: 40px 0 40px 0;
+    line-height:1.8;
+    font-size: calc(1rem + 0.5vw);
+}
+
+.img-gallery{
+    height: 65vh;
+    display:flex; 
+}
+
+/* Containers <div> around each <img> elems */
+.container{
+    height:100%;
+    /* box-sizing:border-box;
+    border: 2px solid red; */
+}
+/* The middle container is allowed to grow but not to shrink */
+.container-middle{
+    flex: 1 0 auto;
+}
+
+/* The outside containers are allowed to shrink */
+.container-left, .container-right{
+    flex: 1 1 auto;
+    cursor:pointer; /* Making the zone a click event listener with js */
+    position: relative; /* origin for positioning the overlay <div> elems */
+}
+
+/* Sizing the actual img elems not just their ocntainer */
+/* !!! We need to size each replaced elems boxes before applying object-fit property to a replaced elem*/
+/* https://stackoverflow.com/questions/37127384/why-isnt-object-fit-working-in-flexbox */
+.container img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+/* Modifying how th eouter img are painted within their img box
+ so they appear cropped out of the screen */
+.container-left img{
+    object-fit:cover;
+    object-position: right center;
+}
+.container-right img{
+    object-fit:cover;
+    object-position: left center;
+}
+
+/* Adding a color filter overlay on top of the outermost images */
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(255,255,255,0.2);
+}
+@media screen and (max-width: 850px) {
+    /* Makes the h2 and p take up more space on the screen for small/portrait devices*/
+    .description {
+     width: 85%;
+     height: 40vh;
+    }
+    .description p{
+        font-size: calc(0.9rem + 1vw);
+        /* margin-top: 50px; */
+    }
+    .img-gallery{
+        height:60vh;
+    }
+  }
+@media screen and (max-width: 600px) {
+    /* Adjust the vertical space allocation between the texts and the images */
+    .description {
+     height: 45vh;
+    }
+    .img-gallery{
+        height:55vh;
+    }
+  }
+
+  /* Hidding the side containers when screen width is < then 550px */
+  @media screen and (max-width: 550px){
+      .container-left, .container-right{
+          display: none;
+      }
+
+      .container-middle{
+          width:100%;
+      }
+      .container img{
+          height: 100%;
+          object-fit: cover;
+      }
+  }

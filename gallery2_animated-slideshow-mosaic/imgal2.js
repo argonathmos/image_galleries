@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const left = document.querySelector('.container-left');
 const right = document.querySelector('.container-right');
 
@@ -6,10 +7,13 @@ const midImg = document.querySelector('.container-middle img');
 const rightImg = document.querySelector('.container-right img');
 
 
+// Event listeners for user click.
 left.addEventListener('click', decrement);
 right.addEventListener('click', increment);
+
+// Getting the number of the image that is displayed by default. 
 i = Number(midImg.getAttribute('src').charAt(5));
-console.log(i);
+
 
 function increment(){
     i = Number(midImg.getAttribute('src').charAt(5));
@@ -62,3 +66,5 @@ function decrement(){
     
 }
 
+// Starting the slidshow after the page has completely loaded with all content
+body.addEventListener('load', setInterval(increment, 4000));

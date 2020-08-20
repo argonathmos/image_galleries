@@ -1,5 +1,4 @@
-## Here is a collection of *image galleries* I am developping for different projects using HTML, CSS and JavaScript.
->>>>>>> 63ffd76d2dfd58f3aa9edbc51ea2a307a55d483a
+## Here is a collection of *image galleries* I am developping as practice exercise using HTML, CSS and JavaScript.
 
 ## Image Gallery 1:
 Animated slideshow for mobile.

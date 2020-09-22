@@ -9,7 +9,7 @@ body{
 .description{
     width: 85%;
     margin: 0 auto;
-    height: 60vh;
+    height: 55vh;
 }
 .description h2{
     margin:0;
@@ -44,4 +44,14 @@ img.enter-right{
     top:0;
     left: 100%;
     /* transition: left 3s linear 0.1s; */
+}
+
+@media (max-width: 800px), (orientation: portrait){
+    .description, .img-gallery{
+        width:500px;
+        margin: 0 auto;
+    }
+    html{
+        background-attachment: black;
+    }
 }

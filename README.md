@@ -4,7 +4,6 @@
 Animated slideshow for mobile.
 Using the CSS `transition` property, and JavaScript `setTimeout()` and `setInterval()` functions to automatically animate the slideshow.
 
-**Make sure to toggle responsive design mode**
 https://argonathmos.github.io/image_galleries/gallery1_animated-slideshow/
 
 ## Image Gallery 2:
